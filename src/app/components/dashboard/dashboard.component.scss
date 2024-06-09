@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; 
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-pane {
+    background-color: white;
+    flex: 0 0 15%;
+    overflow: hidden;
+}
+
+.main-pane {
+    background-color: #f1f7f7;
+    flex: 1;
+    overflow: auto;
+}

@@ -1,0 +1,38 @@
+{
+	"leftPaneItems": {
+		"header": "",
+        "version" : "1.0",
+        "logoPath": "assets/tenants/hd-farms/logo/logo.png",
+        "imagePath": "assets/tenants/hd-farms/images/farm1.jpg",
+		"group": [
+            {
+                "label": "Dashboard",
+                "iconClass": "fa fa-bars"
+            },
+            {
+                "label": "Investments Details",
+                "iconClass": "fa fa-coins"
+            },
+            {
+                "label": "Incomes",
+                "iconClass": "fa fa-money-bill-1"
+            },
+            {
+                "label": "Expense Report",
+                "iconClass": "fa fa-receipt"
+            },
+            {
+                "label": "Aggregate",
+                "iconClass": "fa fa-scale-unbalanced"
+            },
+            {
+                "label": "Settings",
+                "iconClass": "fa fa-gears"
+            },
+            {
+                "label": "Logout",
+                "iconClass": "fa fa-right-from-bracket"
+            }
+		] 
+	}
+}

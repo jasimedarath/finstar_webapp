@@ -1,0 +1,16 @@
+<div class="name">
+  <img src="{{logoPath}}" alt="logo" />
+</div>
+
+<div class="left-pane-menu">
+  <ul>
+    <li *ngFor="let item of menuItems">
+      <i class="{{ item.iconClass }}"></i>
+      <span class="menuLabel">{{ item.label }}</span>
+    </li>
+  </ul>
+</div>
+
+<img class="imageOne" src="{{imagePath}}" alt="image" />
+<h6 class="versionStyles">Version {{version}}</h6>
+
