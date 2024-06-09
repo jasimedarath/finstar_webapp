@@ -7,20 +7,24 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LeftpaneComponent } from './components/dashboard/leftpane/leftpane.component';
 import { MainpaneComponent } from './components/dashboard/mainpane/mainpane.component';
+import { TemplateComponent } from './components/template/template.component';
+import { TableComponent } from "../common-lib/components/table/table.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    DashboardComponent,
-    LeftpaneComponent,
-    MainpaneComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        DashboardComponent,
+        LeftpaneComponent,
+        MainpaneComponent,
+        TemplateComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        TableComponent
+    ]
 })
 export class AppModule { }

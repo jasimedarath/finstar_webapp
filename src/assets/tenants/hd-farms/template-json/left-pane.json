@@ -7,31 +7,38 @@
 		"group": [
             {
                 "label": "Dashboard",
-                "iconClass": "fa fa-bars"
+                "iconClass": "fa fa-bars",
+                "url": "/dashboard"
             },
             {
-                "label": "Investments Details",
-                "iconClass": "fa fa-coins"
+                "label": "Investment Details",
+                "iconClass": "fa fa-coins",
+                "url": "/investments"
             },
             {
                 "label": "Incomes",
-                "iconClass": "fa fa-money-bill-1"
+                "iconClass": "fa fa-money-bill-1",
+                "url": "/incomes"
             },
             {
                 "label": "Expense Report",
-                "iconClass": "fa fa-receipt"
+                "iconClass": "fa fa-receipt",
+                "url": "/expenses"
             },
             {
                 "label": "Aggregate",
-                "iconClass": "fa fa-scale-unbalanced"
+                "iconClass": "fa fa-scale-unbalanced",
+                "url": "/aggregate"
             },
             {
                 "label": "Settings",
-                "iconClass": "fa fa-gears"
+                "iconClass": "fa fa-gears",
+                "url": "/settings"
             },
             {
                 "label": "Logout",
-                "iconClass": "fa fa-right-from-bracket"
+                "iconClass": "fa fa-right-from-bracket",
+                "url": "/logout"
             }
 		] 
 	}
