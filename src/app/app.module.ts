@@ -5,18 +5,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { LeftpaneComponent } from './components/dashboard/leftpane/leftpane.component';
-import { MainpaneComponent } from './components/dashboard/mainpane/mainpane.component';
+import { LeftpaneComponent } from  './components/leftpane/leftpane.component';
 import { TemplateComponent } from './components/template/template.component';
-import { TableComponent } from "../common-lib/components/table/table.component";
+import { TemplateContainerComponent } from "../common-lib/components/template-container/template-container.component";
+import { SettingsComponent } from './components/settings/settings.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         DashboardComponent,
         LeftpaneComponent,
-        MainpaneComponent,
-        TemplateComponent
+        TemplateComponent,
+        SettingsComponent,
+        HomeComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -24,7 +27,8 @@ import { TableComponent } from "../common-lib/components/table/table.component";
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
-        TableComponent
+        TemplateContainerComponent,
+        BrowserAnimationsModule
     ]
 })
 export class AppModule { }
