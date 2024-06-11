@@ -1,3 +1,54 @@
-table {
-    width: 100%;
+$table-border-color: #ccc;
+$icon-color-default: #666;
+$icon-size: 20px;
+$odd-row-bg-color: #f9f9f9;
+$even-row-bg-color: #ffffff;
+
+.mat-table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid $table-border-color;
+
+  th,
+  td {
+    border: 1px solid $table-border-color;
+    padding: 8px;
+    white-space: nowrap;
   }
+
+  .mat-column-sl-no {
+    width: 70px;
+  }
+
+  .mat-column-actions {
+    width: 150px;
+    .mat-sort-header-arrow {
+      visibility: hidden;
+    }
+  }
+
+  .action-buttons {
+    display: none;
+  }
+
+  .hoverable-row:hover .action-buttons {
+    display: inline-block;
+  }
+
+  .mat-icon.icon-styling {
+    font-size: $icon-size !important;
+    color: $icon-color-default; 
+  }
+
+  .currency-column {
+    float: right;
+  }
+
+  .mat-row:nth-child(odd) {
+    background-color: $odd-row-bg-color !important;
+  }
+
+  .mat-row:nth-child(even) {
+    background-color: $even-row-bg-color !important;
+  }
+}

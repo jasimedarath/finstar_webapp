@@ -6,7 +6,39 @@
       "header": "All Investments",
       "templateType": "table",
       "displayOrder": 1,
-      "dataSource": "assets/tenants/hd-farms/data-json/investments.json"
+      "dataSource": "assets/tenants/hd-farms/data-json/investments.json",
+      "tableDetails": [
+          {
+            "label": "Sl.No",
+            "data": "sl.no",
+            "type": "number",
+            "editable": false
+          },
+          {
+            "label": "Investor",
+            "data": "investor",
+            "type": "string",
+            "editable": true
+          },
+          {
+            "label": "Investment Type",
+            "data": "investmentType",
+            "type": "string",
+            "editable": true
+          },
+          {
+            "label": "Amount",
+            "data": "amount",
+            "type": "currency",
+            "editable": true
+          },
+          {
+            "label": "Actions",
+            "data": "actions",
+            "type": "icons",
+            "editable": true
+          }
+      ]
     },
     {
       "header": "Investments Contributions",

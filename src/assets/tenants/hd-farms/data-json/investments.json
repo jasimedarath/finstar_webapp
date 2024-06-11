@@ -3,61 +3,73 @@
 	"header": "Investments",
 	"data": [
 		{
+			"sl.no": 1,
 			"investor" : "Jasna",
 			"investmentType": "First Term",
 			"amount": 6580
 		},
 		{
+			"sl.no": 2,
 			"investor" : "Nasla",
 			"investmentType": "First Term",
 			"amount": 25000
 		},
 		{
+			"sl.no": 3,
 			"investor" : "Fasna",
 			"investmentType": "First Term",
 			"amount": 25000
 		},
 		{
+			"sl.no": 4,
 			"investor" : "Jasim",
 			"investmentType": "First Term",
 			"amount": 2500
 		},
 		{
+			"sl.no": 5,
 			"investor" : "Jasna",
 			"investmentType": "Second Term",
 			"amount": 51500
 		},
 		{
+			"sl.no": 6,
 			"investor" : "Nasla",
 			"investmentType": "Second Term",
 			"amount": 70000
 		},
 		{
+			"sl.no": 7,
 			"investor" : "Fasna",
 			"investmentType": "Second Term",
 			"amount": 70000
 		},
 		{
+			"sl.no": 8,
 			"investor" : "Jasim",
 			"investmentType": "Second Term",
 			"amount": 70000
 		},
 		{
+			"sl.no": 9,
 			"investor" : "Jasna",
 			"investmentType": "Third Term",
 			"amount": 0
 		},
 		{
+			"sl.no": 10,
 			"investor" : "Nasla",
 			"investmentType": "Third Term",
 			"amount": 10000
 		},
 		{
+			"sl.no": 11,
 			"investor" : "Fasna",
 			"investmentType": "Third Term",
 			"amount": 10000
 		},
 		{
+			"sl.no": 12,
 			"investor" : "Jasim",
 			"investmentType": "Third Term",
 			"amount": 10000

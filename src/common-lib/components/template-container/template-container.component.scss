@@ -1,8 +1,17 @@
-.section-styles {
-  display: flex;
+.section {
+  //display: flex;
   justify-content: center;
   height: 100vh;
-  max-width: 90%;
+  max-width: 95%;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.sub-section {
+  max-height: 70%;
+  padding: 10px 5px 5px 5px;
+  overflow-y: auto;
 }
 
 .header-styles {

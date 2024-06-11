@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TableComponent } from '../table/table.component';
 import { HttpClient } from '@angular/common/http';
 import { OrderByPipe } from 'src/common-lib/pipes/order-by.pipe';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-template-container',
@@ -18,7 +19,8 @@ export class TemplateContainerComponent implements OnInit {
   sections: any;
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
   ){}  
 
   ngOnInit() {
@@ -41,6 +43,7 @@ export class TemplateContainerComponent implements OnInit {
       },
       error: (error) => {
         console.log(error);
+        this.router.navigate(['/404']);
       },
     });
   }

@@ -5,7 +5,7 @@
 <div class="left-pane-menu">
   <ul>
     <div *ngFor="let item of menuItems">
-      <li routerLink="{{ item.url }}">
+      <li routerLink="{{ item.url }}" routerLinkActive="active">
         <i class="{{ item.iconClass }}"></i>
         <span class="menuLabel">{{ item.label }}</span>
       </li>
