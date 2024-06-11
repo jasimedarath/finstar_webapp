@@ -1,13 +1,15 @@
 $table-border-color: #ccc;
 $icon-color-default: #666;
 $icon-size: 20px;
-$odd-row-bg-color: #f9f9f9;
+$bg-color: #f1f7f7;
+$odd-row-bg-color: #f1f7f7;
 $even-row-bg-color: #ffffff;
 
 .mat-table {
   border-collapse: collapse;
   width: 100%;
   border: 2px solid $table-border-color;
+  background-color: $bg-color;
 
   th,
   td {
@@ -44,11 +46,8 @@ $even-row-bg-color: #ffffff;
     float: right;
   }
 
-  .mat-row:nth-child(odd) {
-    background-color: $odd-row-bg-color !important;
-  }
+}
 
-  .mat-row:nth-child(even) {
-    background-color: $even-row-bg-color !important;
-  }
+.paginator-style {
+  background-color: #f1f7f7;
 }
