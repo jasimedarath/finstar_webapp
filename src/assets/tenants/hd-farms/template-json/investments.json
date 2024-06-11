@@ -7,7 +7,7 @@
       "templateType": "table",
       "displayOrder": 1,
       "dataSource": "assets/tenants/hd-farms/data-json/investments.json",
-      "tableDetails": [
+      "templateDetails": [
           {
             "label": "Sl.No",
             "data": "sl.no",
@@ -36,7 +36,7 @@
             "label": "Actions",
             "data": "actions",
             "type": "icons",
-            "editable": true
+            "editable": false
           }
       ]
     },

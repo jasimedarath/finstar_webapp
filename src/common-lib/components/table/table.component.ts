@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSort, MatSortModule } from '@angular/material/sort';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-table',
@@ -18,7 +19,8 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
     MatPaginatorModule,
     MatIconModule,
     MatButtonModule,
-    MatSortModule
+    MatSortModule,
+    FormsModule 
   ],
 })
 export class TableComponent implements OnInit {
@@ -51,12 +53,34 @@ export class TableComponent implements OnInit {
   }
 
   editElement(element: any): void {
-    console.log('Edit element', element);
-    // Handle edit action
+    element.editing = true;
+  }
+
+  saveElement(element: any): void {
+    element.editing = false;
+    // Optionally, make an HTTP request to save changes to the server
+    console.log('Element saved', element);
+  }
+
+  cancelEdit(element: any): void {
+    element.editing = false;
+    // Optionally, revert changes if needed
+    console.log('Edit canceled', element);
   }
 
   deleteElement(element: any): void {
     console.log('Delete element', element);
     // Handle delete action
   }
+
+  addNewRow(): void {
+    const newRow = this.tableInfo.reduce((acc: any, info: any) => {
+      acc[info.data] = info.type === 'currency' ? 0 : '';
+      return acc;
+    }, { editing: false });
+
+    this.dataSource.data = [newRow, ...this.dataSource.data];
+    this.dataSource.paginator = this.paginator; // Ensure paginator updates
+  }
+
 }

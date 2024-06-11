@@ -1,17 +1,28 @@
-<div  class="main-header">
-    <h1 class="header-styles">{{ header }}</h1>
+<div class="main-header">
+  <h1 class="header-styles">{{ header }}</h1>
 </div>
 
 <div class="section">
-    <div *ngFor="let section of sections | orderBy: 'section.displayOrder'" class="sub-section">
+  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+    <div
+      *ngFor="let section of sections | orderBy : 'section.displayOrder'"
+      class="sub-section"
+    >
+      <mat-tab label="{{ section.header }}">
         <div *ngIf="section.templateType === 'table'">
-            <h3 class="sub-header">{{ section.header }}</h3>
-            <app-table [dataUrl]="section.dataSource" [tableInfo]="section.tableDetails"></app-table>
+          <!-- <h3 class="sub-header">{{ section.header }}</h3> -->
+          <app-table
+            [dataUrl]="section.dataSource"
+            [tableInfo]="section.templateDetails"
+          ></app-table>
         </div>
         <div *ngIf="section.templateType === 'pie-chart'">
-            <h3 class="sub-header">{{ section.header }}</h3>
-            <h6>Pie Chart coming soon...</h6>
+          <!-- <h3 class="sub-header">{{ section.header }}</h3> -->
+          <app-chart
+           
+          ></app-chart>
         </div>
+      </mat-tab>
     </div>
+  </mat-tab-group>
 </div>
-

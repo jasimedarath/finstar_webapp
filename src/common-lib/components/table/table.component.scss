@@ -10,6 +10,7 @@ $even-row-bg-color: #ffffff;
   width: 100%;
   border: 2px solid $table-border-color;
   background-color: $bg-color;
+  margin-top: 10px;
 
   th,
   td {
@@ -50,4 +51,19 @@ $even-row-bg-color: #ffffff;
 
 .paginator-style {
   background-color: #f1f7f7;
+}
+
+.add-button {
+  background-color: #085026 !important;
+  color: white !important;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.add-button {
+  background-color: #085026; 
+  color: #fff; 
 }

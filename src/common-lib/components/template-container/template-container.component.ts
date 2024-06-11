@@ -4,13 +4,15 @@ import { TableComponent } from '../table/table.component';
 import { HttpClient } from '@angular/common/http';
 import { OrderByPipe } from 'src/common-lib/pipes/order-by.pipe';
 import { Router } from '@angular/router';
+import {MatTabsModule} from '@angular/material/tabs';
+import { ChartComponent } from '../chart/chart.component';
 
 @Component({
   selector: 'app-template-container',
   standalone: true,
   templateUrl: './template-container.component.html',
   styleUrls: ['./template-container.component.scss'],
-  imports: [CommonModule, TableComponent, OrderByPipe],
+  imports: [CommonModule, TableComponent, OrderByPipe, MatTabsModule, ChartComponent],
 })
 export class TemplateContainerComponent implements OnInit {
 
