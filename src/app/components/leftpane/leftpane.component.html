@@ -1,0 +1,17 @@
+<div class="name">
+  <img src="{{ logoPath }}" alt="logo" />
+</div>
+
+<div class="left-pane-menu">
+  <ul>
+    <div *ngFor="let item of menuItems">
+      <li routerLink="{{ item.url }}">
+        <i class="{{ item.iconClass }}"></i>
+        <span class="menuLabel">{{ item.label }}</span>
+      </li>
+    </div>
+  </ul>
+</div>
+
+<img class="imageOne" src="{{ imagePath }}" alt="image" />
+<h6 class="versionStyles">Version {{ version }}</h6>

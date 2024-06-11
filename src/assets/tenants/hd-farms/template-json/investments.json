@@ -1,0 +1,18 @@
+{
+  "category": "investments",
+  "header": "Investments",
+  "section": [
+    {
+      "header": "All Investments",
+      "templateType": "table",
+      "displayOrder": 1,
+      "dataSource": "assets/tenants/hd-farms/data-json/investments.json"
+    },
+    {
+      "header": "Investments Contributions",
+      "templateType": "pie-chart",
+      "displayOrder": 2,
+      "dataSource": "assets/tenants/hd-farms/data-json/investments-contribution.json"
+    }
+  ]
+}

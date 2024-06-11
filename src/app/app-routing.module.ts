@@ -4,11 +4,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TemplateComponent } from './components/template/template.component';
 import { PageNotFoundComponent } from 'src/common-lib/components/page-not-found/page-not-found.component';
 import { SettingsComponent } from './components/settings/settings.component';
-import { HomeComponent } from './components/home/home.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  {path: 'home', component: HomeComponent},
+  {path: 'home', component: AppComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'settings', component: SettingsComponent},
   {path: 'logout', component: DashboardComponent},

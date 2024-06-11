@@ -1,7 +1,8 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, Input, OnInit, ViewChild} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { HttpClient } from '@angular/common/http';
 
 /**
  * @title Table with pagination
@@ -13,11 +14,36 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
   standalone: true,
   imports: [CommonModule, MatTableModule, MatPaginatorModule],
 })
-export class TableComponent implements AfterViewInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+export class TableComponent implements OnInit,AfterViewInit {
+
+  @Input() dataUrl: string ='';
+
+  constructor(
+    private http: HttpClient
+  ){}
+  
+  displayedColumns: string[] = ['investor', 'investmentType', 'amount'];
+  dataSource = new MatTableDataSource<any>();
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  ngOnInit() {
+    this.getData();
+  }
+
+  getData() {
+    this.http
+    .get(`${this.dataUrl}`)
+    .subscribe({
+      next: (data: any) => {
+        console.log(data);
+        this.dataSource = data.data;
+      },
+      error: (error) => {
+        console.log(error);
+      },
+    });
+  }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;

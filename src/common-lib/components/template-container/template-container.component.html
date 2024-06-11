@@ -1,0 +1,17 @@
+<div  class="main-header">
+    <h1 class="header-styles">{{ header }}</h1>
+</div>
+
+<div class="section-styles">
+    <div *ngFor="let section of sections | orderBy: 'section.displayOrder'">
+        <div *ngIf="section.templateType === 'table'">
+            <h3 class="sub-header">{{ section.header }}</h3>
+            <app-table [dataUrl]="section.dataSource"></app-table>
+        </div>
+        <div *ngIf="section.templateType === 'pie-chart'">
+            <h3 class="sub-header">{{ section.header }}</h3>
+            <h6>Pie Chart coming soon...</h6>
+        </div>
+    </div>
+</div>
+

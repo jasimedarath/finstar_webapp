@@ -10,7 +10,6 @@ import { TemplateComponent } from './components/template/template.component';
 import { TemplateContainerComponent } from "../common-lib/components/template-container/template-container.component";
 import { SettingsComponent } from './components/settings/settings.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
     declarations: [
@@ -18,8 +17,7 @@ import { HomeComponent } from './components/home/home.component';
         DashboardComponent,
         LeftpaneComponent,
         TemplateComponent,
-        SettingsComponent,
-        HomeComponent
+        SettingsComponent
     ],
     providers: [],
     bootstrap: [AppComponent],

@@ -1,0 +1,66 @@
+{
+	"category": "investments",
+	"header": "Investments",
+	"data": [
+		{
+			"investor" : "Jasna",
+			"investmentType": "First Term",
+			"amount": 6580
+		},
+		{
+			"investor" : "Nasla",
+			"investmentType": "First Term",
+			"amount": 25000
+		},
+		{
+			"investor" : "Fasna",
+			"investmentType": "First Term",
+			"amount": 25000
+		},
+		{
+			"investor" : "Jasim",
+			"investmentType": "First Term",
+			"amount": 2500
+		},
+		{
+			"investor" : "Jasna",
+			"investmentType": "Second Term",
+			"amount": 51500
+		},
+		{
+			"investor" : "Nasla",
+			"investmentType": "Second Term",
+			"amount": 70000
+		},
+		{
+			"investor" : "Fasna",
+			"investmentType": "Second Term",
+			"amount": 70000
+		},
+		{
+			"investor" : "Jasim",
+			"investmentType": "Second Term",
+			"amount": 70000
+		},
+		{
+			"investor" : "Jasna",
+			"investmentType": "Third Term",
+			"amount": 0
+		},
+		{
+			"investor" : "Nasla",
+			"investmentType": "Third Term",
+			"amount": 10000
+		},
+		{
+			"investor" : "Fasna",
+			"investmentType": "Third Term",
+			"amount": 10000
+		},
+		{
+			"investor" : "Jasim",
+			"investmentType": "Third Term",
+			"amount": 10000
+		}
+	  ]
+}
