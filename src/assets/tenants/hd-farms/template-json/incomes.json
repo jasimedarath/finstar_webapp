@@ -1,5 +1,85 @@
 {
   "category": "incomes",
-  "header": "Incomes",
-  "section": []
+  "header": "Investments",
+  "section": [
+    {
+      "header": "All Investments",
+      "templateType": "table",
+      "displayOrder": 1,
+      "dataSource": "assets/tenants/hd-farms/data-json/investments.json",
+      "templateDetails": [
+          {
+            "label": "No",
+            "data": "sl.no",
+            "type": "number",
+            "editable": false
+          },
+          {
+            "label": "Investor",
+            "data": "investor",
+            "type": "string",
+            "editable": true
+          },
+          {
+            "label": "Investment Type",
+            "data": "investmentType",
+            "type": "string",
+            "editable": true
+          },
+          
+          {
+            "label": "Actions",
+            "data": "actions",
+            "type": "icons",
+            "editable": false
+          }
+      ]
+    },
+    {
+      "header": "Investments Contributions",
+      "templateType": "pie-chart",
+      "displayOrder": 2,
+      "dataSource": "assets/tenants/hd-farms/data-json/investments-contribution.json"
+    },
+    {
+      "header": "Investments Contributions 2",
+      "templateType": "pie-chart",
+      "displayOrder": 2,
+      "dataSource": "assets/tenants/hd-farms/data-json/investments-contribution.json"
+    },
+    {
+      "header": "All Investments 2",
+      "templateType": "table",
+      "displayOrder": 1,
+      "dataSource": "assets/tenants/hd-farms/data-json/investments.json",
+      "templateDetails": [
+         
+          {
+            "label": "Investor",
+            "data": "investor",
+            "type": "string",
+            "editable": true
+          },
+          {
+            "label": "Investment Type",
+            "data": "investmentType",
+            "type": "string",
+            "editable": true
+          },
+          
+          {
+            "label": "Actions",
+            "data": "actions",
+            "type": "icons",
+            "editable": false
+          }
+      ]
+    },
+    {
+      "header": "Investments Contributions 2",
+      "templateType": "pie-chart",
+      "displayOrder": 2,
+      "dataSource": "assets/tenants/hd-farms/data-json/investments-contribution.json"
+    }
+  ]
 }
