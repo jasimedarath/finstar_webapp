@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "finStar:build:production"
+              "buildTarget": "finStar:build:production"
             },
             "development": {
-              "browserTarget": "finStar:build:development"
+              "buildTarget": "finStar:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "finStar:build"
+            "buildTarget": "finStar:build"
           }
         },
         "test": {
