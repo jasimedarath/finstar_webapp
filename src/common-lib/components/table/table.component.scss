@@ -40,30 +40,45 @@ $even-row-bg-color: #ffffff;
 
   .mat-icon.icon-styling {
     font-size: $icon-size !important;
-    color: $icon-color-default; 
+    color: $icon-color-default;
   }
 
   .currency-column {
     float: right;
   }
-
 }
 
 .paginator-style {
   background-color: #f1f7f7;
 }
 
+.add-search-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
 .add-button {
   background-color: #085026 !important;
   color: white !important;
 }
-
-.button-container {
-  display: flex;
-  justify-content: flex-end; 
+.inputField {
+  background-color: #f1f7f7;
 }
 
-.add-button {
-  background-color: #085026; 
-  color: #fff; 
+
+:host ::ng-deep {
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: #f1f7f7 !important;
+  }
+  .mat-primary {
+    --mat-full-pseudo-checkbox-selected-icon-color: #085026;
+    --mat-full-pseudo-checkbox-selected-checkmark-color: #fafafa;
+    --mat-full-pseudo-checkbox-unselected-icon-color: rgba(0, 0, 0, 0.54);
+    --mat-full-pseudo-checkbox-disabled-selected-checkmark-color: #fafafa;
+    --mat-full-pseudo-checkbox-disabled-unselected-icon-color: #b0b0b0;
+    --mat-full-pseudo-checkbox-disabled-selected-icon-color: #b0b0b0;
+    --mat-minimal-pseudo-checkbox-selected-checkmark-color: #085026;
+    --mat-minimal-pseudo-checkbox-disabled-selected-checkmark-color: #b0b0b0;
+}
 }

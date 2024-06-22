@@ -2,9 +2,10 @@ import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { BaseChartDirective } from 'ng2-charts';
 import { ChartType } from 'chart.js';
-import { Chart, PieController, ArcElement, CategoryScale, Tooltip, Legend } from 'chart.js';
+import { Chart, PieController, BarController, LineController, DoughnutController, BubbleController, PolarAreaController, RadarController, ArcElement, BarElement, LineElement, PointElement, LinearScale, CategoryScale, RadialLinearScale, Tooltip, Legend } from 'chart.js';
 
-Chart.register(PieController, ArcElement, CategoryScale, Tooltip, Legend);
+Chart.register(PieController, BarController, LineController, DoughnutController, BubbleController, PolarAreaController, RadarController, ArcElement, BarElement, LineElement, PointElement, LinearScale, CategoryScale, RadialLinearScale, Tooltip, Legend);
+
 
 
 
@@ -16,20 +17,22 @@ Chart.register(PieController, ArcElement, CategoryScale, Tooltip, Legend);
   styleUrls: ['./chart.component.scss'],
 })
 export class ChartComponent {
-  public pieChartType: ChartType = 'pie';
-  public pieChartData = {
-    labels: ['Red', 'Blue', 'Yellow'],
+  @Input() chartType: ChartType = 'pie'; // This can be 'line', 'doughnut', 'bubble', 'polarArea', 'radar', etc.
+  @Input() labels: any = [];
+  @Input() data: any= [30, 50, 10, 20, 10, 50, 57];
+  public chartColors: Array<string> = ['#EE6834', '#98A2EB', '#CCFE56',' #FF8895', '#36B6EB', '#EEFC90'];
+  public chartData = {
+    labels: this.labels,
     datasets: [
       {
-        data: [300, 500, 100],
-        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-        hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+        data: this.data,
+        backgroundColor: this.chartColors,
+        hoverBackgroundColor: this.chartColors
       }
     ]
   };
 
-  // Pie chart options
-  public pieChartOptions = {
+  public chartOptions = {
     responsive: true
   };
 

@@ -6,13 +6,19 @@
       "header": "All Investments",
       "templateType": "table",
       "displayOrder": 1,
-      "dataSource": "assets/tenants/hd-farms/data-json/investments.json",
+      "dataSource": "finstar/v1/investments",
       "templateDetails": [
           {
             "label": "Sl.No",
             "data": "sl.no",
-            "type": "number",
+            "type": "sl.no",
             "editable": false
+          },
+          {
+            "label": "Date",
+            "data": "date",
+            "type": "date",
+            "editable": true
           },
           {
             "label": "Investor",
@@ -44,7 +50,7 @@
       "header": "Investments Contributions",
       "templateType": "pie-chart",
       "displayOrder": 2,
-      "dataSource": "assets/tenants/hd-farms/data-json/investments-contribution.json"
+      "dataSource": "finstar/v1/investments"
     }
   ]
 }
