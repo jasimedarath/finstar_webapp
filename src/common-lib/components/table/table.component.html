@@ -15,107 +15,123 @@
     </button>
   </div>
 
-  <table mat-table [dataSource]="dataSource" matSort class="mat-table">
-    <ng-container *ngFor="let column of tableInfo" [matColumnDef]="column.data">
+  <!-- <ng-container *ngIf="dataSource.data.length>0; else noData"> -->
 
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>
-        <b> {{ column.label }} </b>
-      </th>
+    <table mat-table [dataSource]="dataSource" matSort  class="mat-table">
+      <ng-container
+        *ngFor="let column of tableInfo"
+        [matColumnDef]="column.data"
+      >
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          <b> {{ column.label }} </b>
+        </th>
 
-      <td mat-cell *matCellDef="let element;  let i = index" class="hoverable-row">
-        <ng-container [ngSwitch]="column.type">
-          <span *ngSwitchCase="'sl.no'" class="slno-column"> {{i+1}} </span>
+        <td
+          mat-cell
+          *matCellDef="let element; let i = index"
+          class="hoverable-row"
+        >
+          <ng-container [ngSwitch]="column.type">
+            <span *ngSwitchCase="'sl.no'" class="slno-column">
+              {{ i + 1 }}
+            </span>
 
-          <span *ngSwitchCase="'currency'" class="currency-column">
-            <ng-container *ngIf="element.editing; else displayCurrency">
-              <mat-form-field class="inputField">
-                <input
-                  matInput
-                  [(ngModel)]="element[column.data]"
-                  type="number"
-                  required
-                />
-              </mat-form-field>
-            </ng-container>
-            <ng-template #displayCurrency>
-              {{ element[column.data] | currency : "INR" }}
-            </ng-template>
-          </span>
+            <span *ngSwitchCase="'currency'" class="currency-column">
+              <ng-container *ngIf="element.editing; else displayCurrency">
+                <mat-form-field class="inputField">
+                  <input
+                    matInput
+                    [(ngModel)]="element[column.data]"
+                    type="number"
+                    required
+                  />
+                </mat-form-field>
+              </ng-container>
+              <ng-template #displayCurrency>
+                {{ element[column.data] | currency : "INR" }}
+              </ng-template>
+            </span>
 
-          <span *ngSwitchCase="'date'" class="date-column">
-            <ng-container *ngIf="element.editing; else displayDate">
-              <mat-form-field>
-                <mat-label></mat-label>
-                <input
-                  matInput
-                  [matDatepicker]="picker"
-                  [(ngModel)]="element[column.data]"
-                />
-                <mat-datepicker-toggle
-                  matIconSuffix
-                  [for]="picker"
-                ></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-              </mat-form-field>
-            </ng-container>
-            <ng-template #displayDate>
-              {{ element[column.data] | date : "dd-MMM-yyyy" }}
-            </ng-template>
-          </span>
+            <span *ngSwitchCase="'date'" class="date-column">
+              <ng-container *ngIf="element.editing; else displayDate">
+                <mat-form-field>
+                  <mat-label></mat-label>
+                  <input
+                    matInput
+                    [matDatepicker]="picker"
+                    [(ngModel)]="element[column.data]"
+                  />
+                  <mat-datepicker-toggle
+                    matIconSuffix
+                    [for]="picker"
+                  ></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </ng-container>
+              <ng-template #displayDate>
+                {{ element[column.data] | date : "dd-MMM-yyyy" }}
+              </ng-template>
+            </span>
 
-          <span *ngSwitchDefault>
-            <ng-container
-              *ngIf="element.editing && column.editable; else displayDefault"
-            >
-              <mat-form-field class="inputField">
-                <input matInput [(ngModel)]="element[column.data]" />
-              </mat-form-field>
-            </ng-container>
-            <ng-template #displayDefault>
-              {{ element[column.data] }}
-            </ng-template>
-          </span>
-
-          <ng-container *ngSwitchCase="'icons'">
-            <ng-container *ngIf="element.editing; else displayButtons" >
-              <button mat-icon-button (click)="saveElement(element)">
-                <mat-icon class="icon-styling">check</mat-icon>
-              </button>
-              <button mat-icon-button (click)="cancelEdit(element)">
-                <mat-icon class="icon-styling">close</mat-icon>
-              </button>
-            </ng-container>
-
-            <ng-template #displayButtons>
-              <button mat-icon-button class="action-buttons">
-                <mat-icon class="icon-styling">visibility</mat-icon>
-              </button>
-              <button
-                mat-icon-button
-                class="action-buttons"
-                (click)="enableEdit(element)"
+            <span *ngSwitchDefault>
+              <ng-container
+                *ngIf="element.editing && column.editable; else displayDefault"
               >
-                <mat-icon class="icon-styling">edit</mat-icon>
-              </button>
-              <button
-                mat-icon-button
-                class="action-buttons"
-                (click)="deleteData(element)"
-              >
-                <mat-icon class="icon-styling">delete</mat-icon>
-              </button>
-            </ng-template>
+                <mat-form-field class="inputField">
+                  <input matInput [(ngModel)]="element[column.data]" />
+                </mat-form-field>
+              </ng-container>
+              <ng-template #displayDefault>
+                {{ element[column.data] }}
+              </ng-template>
+            </span>
+
+            <ng-container *ngSwitchCase="'icons'">
+              <ng-container *ngIf="element.editing; else displayButtons">
+                <button mat-icon-button (click)="saveElement(element)">
+                  <mat-icon class="icon-styling">check</mat-icon>
+                </button>
+                <button mat-icon-button (click)="cancelEdit(element)">
+                  <mat-icon class="icon-styling">close</mat-icon>
+                </button>
+              </ng-container>
+
+              <ng-template #displayButtons>
+                <button mat-icon-button class="action-buttons">
+                  <mat-icon class="icon-styling">visibility</mat-icon>
+                </button>
+                <button
+                  mat-icon-button
+                  class="action-buttons"
+                  (click)="enableEdit(element)"
+                >
+                  <mat-icon class="icon-styling">edit</mat-icon>
+                </button>
+                <button
+                  mat-icon-button
+                  class="action-buttons"
+                  (click)="deleteData(element)"
+                >
+                  <mat-icon class="icon-styling">delete</mat-icon>
+                </button>
+              </ng-template>
+            </ng-container>
           </ng-container>
-        </ng-container>
-      </td>
-    </ng-container>
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  </table>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
 
-  <mat-paginator
+    <div #noData *ngIf="dataSource.data.length == 0">No Data Found</div>
+
+    <mat-paginator
     class="paginator-style"
-    [pageSizeOptions]="[5, 10, 20]"
+    [pageSizeOptions]= "paginationOptions"
     showFirstLastButtons
   ></mat-paginator>
+  
+  <!-- </ng-container> -->
+
+
 </div>

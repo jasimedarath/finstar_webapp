@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
@@ -34,11 +34,13 @@ import { ApiService } from 'src/app/services/api.service';
 export class TableComponent implements OnInit {
   @Input() dataUrl: string = '';
   @Input() tableInfo: any;
+  @Input() paginationOptions: number[] = [5, 10, 20, 50];
   dataSource = new MatTableDataSource<any>();
   displayedColumns: string[] = [];
 
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+
 
   constructor(private apiService: ApiService) {}
 
@@ -109,9 +111,10 @@ export class TableComponent implements OnInit {
       { editing: false }
     );
     // Add the new row at the top of the data array
-    //this.dataSource.data = [newRow, ...this.dataSource.data];
+    this.dataSource.data = [newRow, ...this.dataSource.data];
     // Add the new row at the end of the data array
-    this.dataSource.data.push(newRow);
+   // this.dataSource.data.push(newRow);
+   
     this.dataSource.paginator = this.paginator;
   }
 

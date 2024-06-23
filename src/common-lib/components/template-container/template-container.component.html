@@ -14,12 +14,14 @@
           <app-table
             [dataUrl]="section.dataSource"
             [tableInfo]="section.templateDetails"
+            [paginationOptions]="section.paginationOptions"
           ></app-table>
         </div>
-        <div *ngIf="section.templateType === 'pie-chart'">
+        <div *ngIf="section.templateType === 'chart'">
           <!-- <h3 class="sub-header">{{ section.header }}</h3> -->
           <app-chart
-           
+            [dataUrl] = "section.dataSource"
+            [chartType] = "section.chartType"
           ></app-chart>
         </div>
       </mat-tab>

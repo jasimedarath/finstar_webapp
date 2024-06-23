@@ -3,13 +3,14 @@
   "header": "Investments",
   "section": [
     {
-      "header": "All Investments",
+      "header": "Investments",
       "templateType": "table",
       "displayOrder": 1,
       "dataSource": "finstar/v1/investments",
+      "paginationOptions": [4, 10, 20, 50, 100],
       "templateDetails": [
           {
-            "label": "Sl.No",
+            "label": "No",
             "data": "sl.no",
             "type": "sl.no",
             "editable": false
@@ -48,9 +49,10 @@
     },
     {
       "header": "Investments Contributions",
-      "templateType": "pie-chart",
+      "templateType": "chart",
+      "chartType": "doughnut",
       "displayOrder": 2,
-      "dataSource": "finstar/v1/investments"
+      "dataSource": "finstar/v1/investments/summary"
     }
   ]
 }

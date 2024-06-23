@@ -1,85 +1,93 @@
 {
   "category": "incomes",
-  "header": "Investments",
+  "header": "Incomes",
   "section": [
     {
-      "header": "All Investments",
+      "header": "Milk Sale",
       "templateType": "table",
       "displayOrder": 1,
-      "dataSource": "assets/tenants/hd-farms/data-json/investments.json",
+      "paginationOptions": [10, 20, 50, 100],
+      "dataSource": "finstar/v1/incomes/milk",
+      "queryParams": "milk",
       "templateDetails": [
-          {
-            "label": "No",
-            "data": "sl.no",
-            "type": "number",
-            "editable": false
-          },
-          {
-            "label": "Investor",
-            "data": "investor",
-            "type": "string",
-            "editable": true
-          },
-          {
-            "label": "Investment Type",
-            "data": "investmentType",
-            "type": "string",
-            "editable": true
-          },
-          
-          {
-            "label": "Actions",
-            "data": "actions",
-            "type": "icons",
-            "editable": false
-          }
+        {
+          "label": "No",
+          "data": "sl.no",
+          "type": "sl.no",
+          "editable": false
+        },
+        {
+          "label": "Date",
+          "data": "date",
+          "type": "date",
+          "editable": true
+        },
+        {
+          "label": "Source",
+          "data": "source",
+          "type": "string",
+          "editable": true
+        },
+        {
+          "label": "Amount",
+          "data": "amount",
+          "type": "currency",
+          "editable": true
+        },
+        {
+          "label": "Actions",
+          "data": "actions",
+          "type": "icons",
+          "editable": false
+        }
       ]
     },
     {
-      "header": "Investments Contributions",
-      "templateType": "pie-chart",
-      "displayOrder": 2,
-      "dataSource": "assets/tenants/hd-farms/data-json/investments-contribution.json"
-    },
-    {
-      "header": "Investments Contributions 2",
-      "templateType": "pie-chart",
-      "displayOrder": 2,
-      "dataSource": "assets/tenants/hd-farms/data-json/investments-contribution.json"
-    },
-    {
-      "header": "All Investments 2",
+      "header": "Fertiliser Sale",
       "templateType": "table",
-      "displayOrder": 1,
-      "dataSource": "assets/tenants/hd-farms/data-json/investments.json",
+      "displayOrder": 2,
+      "paginationOptions": [10, 20, 50, 100],
+      "dataSource": "finstar/v1/incomes/fertiliser",
+      "queryParams": "fertiliser",
       "templateDetails": [
-         
-          {
-            "label": "Investor",
-            "data": "investor",
-            "type": "string",
-            "editable": true
-          },
-          {
-            "label": "Investment Type",
-            "data": "investmentType",
-            "type": "string",
-            "editable": true
-          },
-          
-          {
-            "label": "Actions",
-            "data": "actions",
-            "type": "icons",
-            "editable": false
-          }
+        {
+          "label": "No",
+          "data": "sl.no",
+          "type": "sl.no",
+          "editable": false
+        },
+        {
+          "label": "Date",
+          "data": "date",
+          "type": "date",
+          "editable": true
+        },
+        {
+          "label": "Source",
+          "data": "source",
+          "type": "string",
+          "editable": true
+        },
+        {
+          "label": "Amount",
+          "data": "amount",
+          "type": "currency",
+          "editable": true
+        },
+        {
+          "label": "Actions",
+          "data": "actions",
+          "type": "icons",
+          "editable": false
+        }
       ]
     },
     {
-      "header": "Investments Contributions 2",
-      "templateType": "pie-chart",
-      "displayOrder": 2,
-      "dataSource": "assets/tenants/hd-farms/data-json/investments-contribution.json"
+      "header": "Sales Growth",
+      "templateType": "chart",
+      "chartType": "line",
+      "displayOrder": 3,
+      "dataSource": "finstar/v1/incomes/summary"
     }
   ]
 }

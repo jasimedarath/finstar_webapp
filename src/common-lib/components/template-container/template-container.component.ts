@@ -19,6 +19,7 @@ export class TemplateContainerComponent implements OnInit {
   @Input() category: string = '';
   header: any;
   sections: any;
+  paginationOptions: any;
 
   constructor(
     private http: HttpClient,
