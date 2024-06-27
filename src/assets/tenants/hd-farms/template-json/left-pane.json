@@ -8,37 +8,37 @@
             {
                 "label": "Dashboard",
                 "iconClass": "fa fa-bars",
-                "url": "/dashboard"
+                "url": "/home/dashboard"
             },
             {
                 "label": "Investments",
                 "iconClass": "fa fa-coins",
-                "url": "/investments"
+                "url": "/home/investments"
             },
             {
                 "label": "Incomes",
                 "iconClass": "fa fa-money-bill-1",
-                "url": "/incomes"
+                "url": "/home/incomes"
             },
             {
                 "label": "Expense Report",
                 "iconClass": "fa fa-receipt",
-                "url": "/expenses"
+                "url": "/home/expenses"
             },
             {
                 "label": "Aggregate",
                 "iconClass": "fa fa-scale-unbalanced",
-                "url": "/aggregate"
+                "url": "/home/aggregate"
             },
             {
                 "label": "Settings",
                 "iconClass": "fa fa-gears",
-                "url": "/settings"
+                "url": "/home/settings"
             },
             {
                 "label": "Logout",
                 "iconClass": "fa fa-right-from-bracket",
-                "url": "/logout"
+                "url": "/login"
             }
 		] 
 	}

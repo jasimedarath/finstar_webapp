@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="logo-section">
+    <img
+      src="../../../assets/tenants/hd-farms/logo/logo.png"
+      style="width: 300px; height: 200px"
+    />
+  </div>
+  <div class="filler"></div>
+  <div class="credentials-section">
+
+    <form class="example-form">
+      <mat-form-field class="userName">
+        <mat-label>User Name</mat-label>
+        <input
+          type="text"
+          [(ngModel)]="userName"
+          matInput
+          [ngModelOptions]="{ standalone: true }"
+        />
+      </mat-form-field>
+    </form>
+
+    <form class="example-form">
+      <mat-form-field class="password">
+        <mat-label>Password</mat-label>
+        <input
+          type="password"
+          [(ngModel)]="password"
+          matInput
+          [ngModelOptions]="{ standalone: true }"
+        />
+      </mat-form-field>
+    </form>
+
+    <div class="button-grp"><button
+      mat-raised-button
+      class="login-button"
+      (click)="loginApp()"
+    >
+      Login
+    </button></div>
+  </div>
+</div>

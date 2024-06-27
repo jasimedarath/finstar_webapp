@@ -33,6 +33,7 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class TableComponent implements OnInit {
   @Input() dataUrl: string = '';
+  @Input() queryParams: string = '';
   @Input() tableInfo: any;
   @Input() paginationOptions: number[] = [5, 10, 20, 50];
   dataSource = new MatTableDataSource<any>();
