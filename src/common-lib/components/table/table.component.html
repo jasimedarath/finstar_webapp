@@ -123,7 +123,7 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
 
-    <div #noData *ngIf="dataSource.data.length == 0">No Data Found</div>
+    <div #noData class="no-data" *ngIf="dataSource.data.length == 0">No Data</div>
 
     <mat-paginator
     class="paginator-style"

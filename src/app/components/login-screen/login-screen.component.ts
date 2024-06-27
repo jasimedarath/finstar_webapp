@@ -29,7 +29,7 @@ export class LoginScreenComponent implements OnInit {
       userName: this.userName,
       password: this.password,
     };
-  
+
     try {
       const isAuthenticated = await this.authService.authenticateUser(data);
       if (isAuthenticated) {
@@ -41,4 +41,4 @@ export class LoginScreenComponent implements OnInit {
       console.error('Authentication failed:', error);
     }
   }
-}  
+}

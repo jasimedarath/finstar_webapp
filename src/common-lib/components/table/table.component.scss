@@ -62,10 +62,15 @@ $even-row-bg-color: #ffffff;
   background-color: #085026 !important;
   color: white !important;
 }
+
 .inputField {
   background-color: #f1f7f7;
 }
 
+.no-data {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
 
 :host ::ng-deep {
   .mdc-text-field--filled:not(.mdc-text-field--disabled) {
